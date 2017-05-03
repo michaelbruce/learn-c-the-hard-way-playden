@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <ctype.h>
+#include <ctype.h> // header file for isalphas/isblank
 
-// forward declarations
-int can_print_it(char sh);
+// forward declarations - declare what you will used before it is defined
+int can_print_it(char ch);
 void print_letters(char arg[]);
 
 void print_arguments(int argc, char *argv[])
