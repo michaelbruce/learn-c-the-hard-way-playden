@@ -15,9 +15,21 @@ char* substitute(char* string, char* pattern, char* replacement)
     char *result = strstr(string, pattern);
     int position = result - string;
     if (result != NULL) {
-    printf("match found at %d\n", position);
+        printf("match found at %d\n", position);
     }
-    return "yes";
+
+    char first[50];
+    strncpy(first, string, position);
+    first[position] = '\0';
+    printf("copied: %s\n", first);
+
+    strcat(first, replacement);
+    strcat(first, result);
+
+    // printf("result: %s", result);
+    printf("final: %s", first);
+
+    return "";
 }
 
 int main(int argc, char** argv)
